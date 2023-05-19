@@ -40,7 +40,6 @@ $hotels = [
     ];
 
 
-    var_dump($hotels);
 ?>
 
 <!DOCTYPE html>
@@ -74,6 +73,13 @@ $hotels = [
              '<td>' . $elem['vote'] . '</td>'.
              '<td>' . $elem['distance_to_center'] . 'km' . '</td>'.
              '</tr>';
+            
+             if($elem['parking'] != false){
+                $elem['parking'] = 'si';
+            }else{
+                $elem['parking'] = 'no';
+            }
+             
         }
         ?>
         </tbody>
